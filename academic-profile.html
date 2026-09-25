@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic profile, research, publications, and contact information.">
+  <title>Your Name | Academic Profile</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a3650'/%3E%3Ctext x='32' y='45' text-anchor='middle' fill='white' font-size='40' font-family='Georgia'%3EY%3C/text%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: light; --ink:#24313d; --muted:#647282; --blue:#225679; --line:#e2e8ed; --bg:#fff; --soft:#f5f8fa; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--bg); font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; } a:focus-visible { outline:3px solid #3b83a9; outline-offset:3px; }
+    .wrap { max-width:1120px; margin:0 auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fff; }
+    .topbar .wrap { display:flex; align-items:center; justify-content:space-between; min-height:68px; gap:20px; }
+    .brand { font-weight:700; font-size:1.08rem; color:var(--ink); white-space:nowrap; }
+    nav { display:flex; flex-wrap:wrap; gap:10px 22px; font-size:.91rem; }
+    main { padding:64px 0 88px; }
+    .hero { display:grid; grid-template-columns:230px minmax(0,1fr); gap:58px; align-items:start; }
+    .profile { text-align:center; }
+    .portrait { width:190px; height:190px; margin:0 auto 23px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(145deg,#dfe9ef,#b9ccd9); color:#2b5872; font:700 4.3rem Georgia,serif; }
+    .profile h1 { margin:0; font:700 1.75rem/1.2 Georgia,serif; letter-spacing:-.02em; }
+    .profile p { margin:12px 0 0; line-height:1.5; }
+    .profile .role { color:var(--muted); }
+    .quick-links { margin-top:22px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap; font-size:.9rem; }
+    h2 { margin:0 0 20px; font:700 1.75rem/1.25 Georgia,serif; letter-spacing:-.02em; }
+    h3 { margin:0 0 10px; font-size:1rem; }
+    p { margin:0 0 18px; }
+    .bio p:last-child { margin-bottom:0; }
+    .details { display:grid; grid-template-columns:1fr 1fr; gap:30px; padding:45px 0 8px; }
+    .details ul { padding-left:20px; margin:0; }
+    .details li { margin-bottom:8px; }
+    section.block { border-top:1px solid var(--line); margin-top:58px; padding-top:36px; }
+    .entry { padding:18px 0; border-bottom:1px solid var(--line); }
+    .entry:first-of-type { padding-top:0; }
+    .entry:last-child { border-bottom:0; }
+    .entry h3 { font:600 1.08rem/1.5 system-ui,sans-serif; }
+    .entry p { color:var(--muted); margin:3px 0 0; }
+    .entry .links { margin-top:8px; font-size:.92rem; }
+    .contact { padding:34px; background:var(--soft); border-radius:8px; }
+    footer { border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; padding:25px 0; }
+    @media (max-width:750px) { .topbar .wrap { align-items:flex-start; flex-direction:column; padding-top:16px; padding-bottom:16px; } main { padding-top:42px; } .hero { grid-template-columns:1fr; gap:42px; } .details { grid-template-columns:1fr; } .profile { max-width:350px; margin:auto; } .portrait { width:150px; height:150px; font-size:3.5rem; } }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap"><a class="brand" href="#top">Your Name</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#publications">Publications</a><a href="#working-papers">Working Papers</a><a href="#presentations">Presentations</a><a href="#contact">Contact</a></nav></div></header>
+  <main id="top" class="wrap">
+    <div class="hero" id="about">
+      <aside class="profile" aria-label="Profile"><div class="portrait" role="img" aria-label="Placeholder portrait with initial Y">Y</div><h1>Your Name</h1><p class="role">Your Academic Title</p><p><a href="https://example.edu/">Your University</a></p><div class="quick-links"><a href="mailto:you@example.edu">Email</a><a href="https://scholar.google.com/">Google Scholar</a><a href="https://github.com/">GitHub</a><a href="cv.pdf">CV</a></div></aside>
+      <div class="bio"><h2>Biography</h2><p>Write a brief introduction to your research and the questions that motivate your work. This space can describe your current appointment, research approach, and collaborations.</p><p>Add a second paragraph about your background, teaching, or current projects. Replace every example and placeholder on this page before publishing.</p><div class="details"><div><h3>Research interests</h3><ul><li>Research area one</li><li>Research area two</li><li>Research area three</li></ul></div><div><h3>Education</h3><ul><li>PhD, Field — University, Year</li><li>MA, Field — University, Year</li><li>BA/BS, Field — University, Year</li></ul></div></div></div>
+    </div>
+    <section class="block" id="publications"><h2>Publications</h2><article class="entry"><h3><a href="#">Title of your published paper</a></h3><p>Your Name and Coauthor Name · Journal Name · 2026</p><div class="links"><a href="#">Paper PDF</a> · <a href="#">DOI</a></div></article><article class="entry"><h3><a href="#">Another publication title</a></h3><p>Coauthor Name and Your Name · Journal Name · 2025</p></article></section>
+    <section class="block" id="working-papers"><h2>Working Papers</h2><article class="entry"><h3>Working paper title</h3><p>Your Name and collaborators · Manuscript in preparation</p></article></section>
+    <section class="block" id="presentations"><h2>Conference Presentations</h2><article class="entry"><h3>Presentation title</h3><p>Conference name · City · Month 2026</p></article></section>
+    <section class="block" id="contact"><div class="contact"><h2>Contact</h2><p>Email: <a href="mailto:you@example.edu">you@example.edu</a></p><p>Department · Your University · City, State</p></div></section>
+  </main>
+  <footer><div class="wrap">© <span id="year">2026</span> Your Name</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
