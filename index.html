@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrew Byung Wook Chung</title>
+<meta name="description" content="Andrew Byung Wook Chung, Ph.D. candidate in Marketing at the Mike Ilitch School of Business, Wayne State University. Research on misleading marketing communications, disclaimers, and reference pricing.">
+
+<!-- Fonts & icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+
+<!-- Apply saved theme before paint to avoid a flash -->
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f8fafc;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --heading: #111827;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+    --primary-soft: #dbeafe;
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --card: #ffffff;
+    --award: #b45309;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f172a;
+      --bg-alt: #111c33;
+      --text: #cbd5e1;
+      --muted: #94a3b8;
+      --heading: #f1f5f9;
+      --border: #1e293b;
+      --primary: #60a5fa;
+      --primary-soft: #1e3a8a;
+      --nav-bg: rgba(15, 23, 42, 0.85);
+      --card: #131d33;
+      --award: #fbbf24;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f172a;
+    --bg-alt: #111c33;
+    --text: #cbd5e1;
+    --muted: #94a3b8;
+    --heading: #f1f5f9;
+    --border: #1e293b;
+    --primary: #60a5fa;
+    --primary-soft: #1e3a8a;
+    --nav-bg: rgba(15, 23, 42, 0.85);
+    --card: #131d33;
+    --award: #fbbf24;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { color: var(--heading); line-height: 1.25; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+  /* ---------- Navbar ---------- */
+  .navbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--nav-bg);
+    backdrop-filter: saturate(180%) blur(8px);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-weight: 700; font-size: 1.15rem; color: var(--heading); }
+  .brand:hover { text-decoration: none; }
+  .nav-links { display: flex; gap: 4px; align-items: center; list-style: none; margin: 0; padding: 0; }
+  .nav-links a {
+    display: block; padding: 6px 12px; border-radius: 6px;
+    color: var(--text); font-weight: 500; font-size: 0.95rem;
+  }
+  .nav-links a:hover { color: var(--primary); text-decoration: none; background: var(--bg-alt); }
+  .nav-actions { display: flex; align-items: center; gap: 4px; }
+  .icon-btn {
+    background: none; border: 0; cursor: pointer; color: var(--text);
+    width: 38px; height: 38px; border-radius: 8px; font-size: 1.05rem;
+  }
+  .icon-btn:hover { background: var(--bg-alt); color: var(--primary); }
+  .menu-btn { display: none; }
+
+  @media (max-width: 900px) {
+    .menu-btn { display: inline-block; }
+    .nav-links {
+      display: none; position: absolute; top: 64px; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--bg); border-bottom: 1px solid var(--border); padding: 8px 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 8px; }
+  }
+
+  /* ---------- Hero / About ---------- */
+  .about { padding: 64px 0 48px; }
+  .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: start; }
+  .profile { text-align: center; }
+  .avatar {
+    width: 220px; height: 220px; border-radius: 50%; object-fit: cover;
+    display: block; margin: 0 auto 20px; background: var(--bg-alt);
+    border: 1px solid var(--border);
+  }
+  .profile h1 { font-size: 1.75rem; margin: 0 0 4px; font-weight: 800; }
+  .role { color: var(--muted); margin: 0 0 6px; font-size: 1.05rem; }
+  .affil { margin: 0 0 16px; line-height: 1.5; }
+  .affil a { color: var(--text); font-weight: 500; }
+  .socials { display: flex; justify-content: center; gap: 14px; list-style: none; padding: 0; margin: 0; }
+  .socials a { color: var(--muted); font-size: 1.4rem; }
+  .socials a:hover { color: var(--primary); text-decoration: none; }
+
+  .bio h2 { font-size: 1.75rem; margin: 0 0 12px; font-weight: 800; }
+  .bio p { margin: 0 0 16px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1.4fr; gap: 32px; margin-top: 28px; }
+  .two-col h3 { font-size: 1.2rem; margin: 0 0 10px; font-weight: 700; }
+  .interests { list-style: none; padding: 0; margin: 0; }
+  .interests li { padding: 2px 0; }
+  .interests li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--primary); margin-right: 10px; font-size: 0.85em; }
+  .edu { list-style: none; padding: 0; margin: 0; }
+  .edu li { display: flex; gap: 12px; padding: 4px 0; }
+  .edu i { color: var(--primary); margin-top: 6px; }
+  .edu .degree { font-weight: 600; color: var(--heading); }
+  .edu .school { color: var(--muted); font-size: 0.93rem; }
+
+  @media (max-width: 820px) {
+    .about { padding: 40px 0 32px; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .two-col { grid-template-columns: 1fr; gap: 24px; }
+    .avatar { width: 180px; height: 180px; }
+  }
+
+  /* ---------- Content sections ---------- */
+  section.block { padding: 56px 0; border-top: 1px solid var(--border); }
+  section.block:nth-of-type(even) { background: var(--bg-alt); }
+  .section-title { text-align: center; font-size: 1.9rem; font-weight: 800; margin: 0 0 8px; }
+  .section-sub { text-align: center; color: var(--muted); margin: 0 0 36px; }
+
+  .pub-list { list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .pub { padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .pub:last-child { border-bottom: 0; }
+  .pub-authors { font-size: 0.95rem; color: var(--muted); }
+  .pub-authors strong { color: var(--heading); font-weight: 600; }
+  .pub-title { font-weight: 700; color: var(--heading); font-size: 1.05rem; display: block; margin: 2px 0; }
+  .pub-venue { font-size: 0.95rem; }
+  .pub-status { font-size: 0.95rem; }
+  .award {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
+    font-size: 0.85rem; font-weight: 600; color: var(--award);
+  }
+
+  /* ---------- Teaching / Honors ---------- */
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 22px 18px;
+  }
+  .card h3 { font-size: 1.1rem; margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
+  .card h3 i { color: var(--primary); }
+  .card ul { list-style: none; padding: 0; margin: 0; }
+  .card li { padding: 5px 0; font-size: 0.95rem; line-height: 1.5; }
+  .card .meta { color: var(--muted); font-size: 0.88rem; }
+  @media (max-width: 900px) { .card-grid { grid-template-columns: 1fr; } }
+
+  .teach-list { list-style: none; padding: 0; margin: 0 auto; max-width: 860px; }
+  .teach-list li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .teach-list li:last-child { border-bottom: 0; }
+  .teach-list .course { font-weight: 700; color: var(--heading); }
+  .teach-list .code { color: var(--muted); font-weight: 500; }
+  .teach-list .terms { font-size: 0.95rem; color: var(--muted); }
+
+  .skills { text-align: center; color: var(--muted); font-size: 0.95rem; margin: 28px auto 0; max-width: 860px; }
+
+  /* ---------- Contact ---------- */
+  .contact-list { list-style: none; padding: 0; margin: 0 auto; max-width: 560px; }
+  .contact-list li { display: flex; gap: 14px; align-items: flex-start; padding: 8px 0; }
+  .contact-list i { color: var(--primary); width: 20px; text-align: center; margin-top: 6px; }
+  .contact-list span, .contact-list a { overflow-wrap: anywhere; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; color: var(--muted); font-size: 0.88rem; }
+  footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#">Andrew B. Chung</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Home</a></li>
+      <li><a href="#working-papers">Working papers</a></li>
+      <li><a href="#presentations">Conference presentations</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#honors">Honors &amp; service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="profile">
+      <!-- Replace with your photo: put e.g. avatar.jpg next to index.html and set src="avatar.jpg" -->
+      <img class="avatar" src="https://placehold.co/440x440/e2e8f0/64748b?text=Photo" alt="Portrait of Andrew Byung Wook Chung">
+      <h1>Andrew Byung Wook Chung</h1>
+      <p class="role">Ph.D. Candidate in Marketing</p>
+      <p class="affil"><a href="https://ilitchbusiness.wayne.edu/" target="_blank" rel="noopener">Mike Ilitch School of Business<br>Wayne State University</a></p>
+      <ul class="socials">
+        <li><a href="mailto:andrew.byungwook.chung@wayne.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://scholar.google.com/citations?user=Q4uUmkoAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/andrewbchung/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="cv.pdf" target="_blank" aria-label="Curriculum vitae (PDF)" title="CV"><i class="ai ai-cv"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="bio">
+      <h2>Biography</h2>
+      <p>
+        I am a Ph.D. candidate in Marketing at the Mike Ilitch School of Business, Wayne State University.
+        My research examines how misleading marketing communications shape consumer perceptions and decisions.
+      </p>
+      <p>
+        My dissertation focuses on <strong>claim–disclaimer inconsistency</strong> and how conflicting product
+        information can increase perceived deception and undermine consumer responses. A related stream examines
+        <strong>inflated reference pricing</strong> and how consumers respond to potentially misleading price information.
+        Across these projects, I study when persuasive tactics backfire and how clearer marketing communication can
+        benefit consumers, firms, and the marketplace.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <h3>Interests</h3>
+          <ul class="interests">
+            <li>Consumer Wellbeing</li>
+            <li>Pricing</li>
+            <li>Financial Decision Making</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <ul class="edu">
+            <li><i class="fa-solid fa-graduation-cap"></i>
+              <div><div class="degree">Ph.D. in Marketing, 2022–Present</div><div class="school">Wayne State University</div></div></li>
+            <li><i class="fa-solid fa-graduation-cap"></i>
+              <div><div class="degree">MS in Business Analytics, 2022</div><div class="school">University of Massachusetts Amherst</div></div></li>
+            <li><i class="fa-solid fa-graduation-cap"></i>
+              <div><div class="degree">MBA, 2018</div><div class="school">Babson College</div></div></li>
+            <li><i class="fa-solid fa-graduation-cap"></i>
+              <div><div class="degree">BA in English Language and Literature, 2013</div><div class="school">National Institute for Lifelong Education, Seoul</div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKING PAPERS ===== -->
+<section class="block" id="working-papers">
+  <div class="container">
+    <h2 class="section-title">Working papers</h2>
+    <p class="section-sub">Manuscripts in progress</p>
+    <ol class="pub-list">
+      <li class="pub">
+        <div class="pub-authors"><strong>Byung Wook Chung</strong> &amp; Andrea Tangari</div>
+        <span class="pub-title">When Disclaimers Backfire: Claim-Disclaimer Incongruency and Perceived Deception in Cosmetic Marketing</span>
+        <div class="pub-status">Submitted to the AMA Winter Academic Conference 2027.</div>
+      </li>
+      <li class="pub">
+        <div class="pub-authors"><strong>Byung Wook Chung</strong> &amp; Abijit Biswas</div>
+        <span class="pub-title">The Impact of Fictitious Reference Pricing on E-commerce Store Preference</span>
+        <div class="award"><i class="fa-solid fa-award"></i>Best in Track Paper, Retailing and Pricing track, AMA Summer Academic Conference 2026</div>
+      </li>
+      <li class="pub">
+        <div class="pub-authors"><strong>Byung Wook Chung</strong>, Cassandra Davis, &amp; Andrea Tangari</div>
+        <span class="pub-title">The Impact of Gain- and Loss-Framed Warnings on Cryptocurrency Investment Intentions: The Moderating Role of Subjective Financial Knowledge</span>
+        <div class="pub-status">Poster presentation at the AMA Summer Academic Conference 2025.</div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== CONFERENCE PRESENTATIONS ===== -->
+<section class="block" id="presentations">
+  <div class="container">
+    <h2 class="section-title">Conference presentations</h2>
+    <p class="section-sub">Talks and posters</p>
+    <ol class="pub-list">
+      <li class="pub">
+        <div class="pub-authors"><strong>Byung Wook Chung</strong> &amp; Abijit Biswas (2026, August)</div>
+        <span class="pub-title">The Impact of Fictitious Reference Pricing on E-commerce Store Preference</span>
+        <div class="pub-venue">Competitive paper, 2026 American Marketing Association Summer Academic Conference, Chicago, IL.</div>
+        <div class="award"><i class="fa-solid fa-award"></i>Best in Track Paper, Retailing and Pricing track</div>
+      </li>
+      <li class="pub">
+        <div class="pub-authors"><strong>Byung Wook Chung</strong>, Cassandra Davis, &amp; Andrea Tangari (2025, August)</div>
+        <span class="pub-title">The Impact of Gain- and Loss-Framed Warnings on Cryptocurrency Investment Intentions: The Moderating Role of Subjective Financial Knowledge</span>
+        <div class="pub-venue">Poster, 2025 American Marketing Association Summer Academic Conference, Chicago, IL.</div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== TEACHING ===== -->
+<section class="block" id="teaching">
+  <div class="container">
+    <h2 class="section-title">Teaching</h2>
+    <p class="section-sub">Instructor of record, Mike Ilitch School of Business</p>
+    <ul class="teach-list">
+      <li>
+        <div><span class="course">Marketing Research and Analysis</span> <span class="code">(MKT 5410)</span></div>
+        <div class="terms">Fall 2026, Summer 2026, Winter 2026, Fall 2025, Summer 2025</div>
+      </li>
+      <li>
+        <div><span class="course">Marketing Management</span> <span class="code">(MKT 2300)</span></div>
+        <div class="terms">Winter 2025, Fall 2024</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== HONORS & SERVICE ===== -->
+<section class="block" id="honors">
+  <div class="container">
+    <h2 class="section-title">Honors &amp; service</h2>
+    <p class="section-sub">Awards, workshops, and professional service</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3><i class="fa-solid fa-trophy"></i>Awards &amp; fellowships</h3>
+        <ul>
+          <li>Summer Research Grant <span class="meta">· 2026</span></li>
+          <li>Summer Research Grant <span class="meta">· 2025</span></li>
+          <li>Harold E. Hardy Scholarship <span class="meta">· 2021</span></li>
+          <li>Isenberg School of Management Fellowship Award <span class="meta">· 2019</span></li>
+          <li>Babson MBA Scholars <span class="meta">· 2016–2018</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-users"></i>Workshops &amp; consortiums</h3>
+        <ul>
+          <li>Transformative Consumer Research Pre-Conference <span class="meta">· 2026</span></li>
+          <li>Society for Marketing Advances Doctoral Consortium <span class="meta">· 2025</span></li>
+          <li>Marketing &amp; Public Policy Junior Scholar Workshop <span class="meta">· 2025</span></li>
+          <li>Marketing &amp; Public Policy Pre-Conference Workshop <span class="meta">· 2023</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-pen-to-square"></i>Professional service</h3>
+        <ul>
+          <li>Reviewer, AMA Winter Academic Conference <span class="meta">· 2027</span></li>
+          <li>Reviewer, Society for Marketing Advances Conference <span class="meta">· 2025</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="skills"><strong>Skills:</strong> R, Python, KNIME, Tableau, Adobe Photoshop &amp; Illustrator · data analytics, text mining</p>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="block" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Feel free to reach out</p>
+    <ul class="contact-list">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:andrew.byungwook.chung@wayne.edu">andrew.byungwook.chung@wayne.edu</a></li>
+      <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/andrewbchung/" target="_blank" rel="noopener">linkedin.com/in/andrewbchung</a></li>
+      <li><i class="ai ai-google-scholar"></i><a href="https://scholar.google.com/citations?user=Q4uUmkoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a></li>
+      <li><i class="fa-solid fa-location-dot"></i><span>Mike Ilitch School of Business, Wayne State University<br>2771 Woodward Avenue, Room 450, Detroit, MI 48201</span></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year">2026</span> Andrew Byung Wook Chung. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  var menuBtn = document.getElementById('menuBtn');
+  var navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+  navLinks.addEventListener('click', function (e) { if (e.target.tagName === 'A') navLinks.classList.remove('open'); });
+
+  // Theme toggle
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('themeBtn');
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function syncIcon() {
+    themeBtn.innerHTML = isDark() ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  }
+  themeBtn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncIcon();
+  });
+  syncIcon();
+</script>
+</body>
+</html>
