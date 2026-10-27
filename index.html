@@ -133,12 +133,14 @@
   .socials { display: flex; justify-content: center; gap: 14px; list-style: none; padding: 0; margin: 0; }
   .socials a { color: var(--muted); font-size: 1.4rem; }
   .socials a:hover { color: var(--primary); text-decoration: none; }
-  .cv-btn {
-    display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
-    padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
-    background: var(--primary); color: var(--bg);
+  .socials li { display: flex; align-items: center; }
+  .socials a.cv-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 1.4rem; padding: 0 4px; border-radius: 4px;
+    background: var(--muted); color: var(--bg);
+    font-size: 0.8rem; font-weight: 800; letter-spacing: 0.02em; line-height: 1;
   }
-  .cv-btn:hover { opacity: 0.9; text-decoration: none; }
+  .socials a.cv-icon:hover { background: var(--primary); color: var(--bg); }
 
   .bio h2 { font-size: 1.75rem; margin: 0 0 12px; font-weight: 800; }
   .bio p { margin: 0 0 16px; }
@@ -223,9 +225,7 @@
       <li><a href="#presentations">Conference presentations</a></li>
       <li><a href="#teaching">Teaching</a></li>
       <li><a href="#honors">Honors &amp; service</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="CV_Andrew_Byungwook_Chung.pdf" target="_blank">CV</a></li>
-    </ul>
+      <li><a href="#contact">Contact</a></li>    </ul>
     <div class="nav-actions">
       <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme"><i class="fa-solid fa-moon"></i></button>
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
@@ -242,14 +242,13 @@
       <img class="avatar" src="portrait.jpg" alt="Portrait of Andrew Byung Wook Chung">
       <h1>Andrew Byung Wook Chung</h1>
       <p class="role">Ph.D. Candidate in Marketing</p>
-      <p class="affil"><a href="https://ilitchbusiness.wayne.edu/profile/hm4783" target="_blank" rel="noopener">Mike Ilitch School of Business<br>Wayne State University</a></p>
+      <p class="affil"><a href="https://ilitchbusiness.wayne.edu/" target="_blank" rel="noopener">Mike Ilitch School of Business<br>Wayne State University</a></p>
       <ul class="socials">
         <li><a href="mailto:andrew.byungwook.chung@wayne.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
         <li><a href="https://scholar.google.com/citations?user=Q4uUmkoAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
         <li><a href="https://www.linkedin.com/in/andrewbchung/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="CV_Andrew_Byungwook_Chung.pdf" target="_blank" aria-label="Curriculum vitae (PDF)" title="CV"><i class="ai ai-cv"></i></a></li>
+        <li><a class="cv-icon" href="CV_Andrew_Byungwook_Chung.pdf" target="_blank" aria-label="Curriculum vitae (PDF)" title="CV">CV</a></li>
       </ul>
-      <a class="cv-btn" href="CV_Andrew_Byungwook_Chung.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i>CV</a>
     </div>
 
     <div class="bio">
